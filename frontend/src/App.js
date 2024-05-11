@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Todo from './Todo';
+import Task from './Task';
 
 function App() {
   return (
     <div>
-      <Todo />
+      <Task />
     </div>
   );
 }

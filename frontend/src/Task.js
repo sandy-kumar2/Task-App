@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Todo = () => {
+const Task = () => {
   const [taskInput, setTaskInput] = useState("");
   const [tasks, setTasks] = useState([]);
   const [addCounter, setAddCounter] = useState(0);
@@ -109,4 +109,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default Task;
