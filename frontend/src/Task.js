@@ -58,7 +58,7 @@ const Task = () => {
   return (
     <div className="full-page">
       <div className="content">
-        <h1>Todo Application</h1>
+        <h1>Task Application</h1>
         <div>
           <input
             type="text"
