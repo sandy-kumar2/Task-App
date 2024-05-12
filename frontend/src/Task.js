@@ -11,7 +11,7 @@ const Task = () => {
   // Function to fetch tasks
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/tasks");
+      const response = await axios.get("https://task-app-7.onrender.com/tasks");
       setTasks(response.data.tasks);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -21,7 +21,7 @@ const Task = () => {
   // Function to add a task
   const addTask = async () => {
     try {
-      await axios.post("http://localhost:8080/tasks", { task: taskInput });
+      await axios.post("https://task-app-7.onrender.com/tasks", { task: taskInput });
       setTaskInput("");
       setAddCounter(addCounter + 1);
       fetchTasks();
@@ -33,7 +33,7 @@ const Task = () => {
   // Function to update a task
   const updateTask = async (taskId, updatedTask) => {
     try {
-      await axios.put(`http://localhost:8080/tasks/${taskId}`, {
+      await axios.put(`https://task-app-7.onrender.com/tasks/${taskId}`, {
         task: updatedTask,
       });
       setUpdateCounter(updateCounter + 1);
@@ -47,7 +47,7 @@ const Task = () => {
   //Show Api Counts 
   const handleApiCount = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/counters`);
+      const response = await axios.get(`https://task-app-7.onrender.com/counters`);
       setAddCounter(response.data.addCounter);
       setUpdateCounter(response.data.updateCounter);
     } catch (error) {

@@ -1,3 +1,4 @@
+const mongoose = require('./config/db');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -8,6 +9,7 @@ const PORT = 8080;
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+mongoose();
 
 // Dummy database to store tasks
 let tasks = [];
